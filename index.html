@@ -5,22 +5,45 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>My Research Blog</title>
   <style>
+    * {
+      box-sizing: border-box;
+    }
     body {
       font-family: Georgia, serif;
-      background: #fff;
       color: #222;
       line-height: 1.6;
       margin: 0;
-      padding: 2rem;
+      padding: 0;
+      background: #fff;
+    }
+    .banner {
+      position: relative;
+      height: 320px;
+      background: url('B.jpg') no-repeat center center;
+      background-size: cover;
+      -webkit-mask-image: linear-gradient(to bottom, black 70%, transparent 100%);
+      mask-image: linear-gradient(to bottom, black 70%, transparent 100%);
+    }
+    .content {
       max-width: 750px;
-      margin-left: auto;
-      margin-right: auto;
+      margin: -80px auto 0 auto;
+      background: #fff;
+      padding: 2rem;
+      position: relative;
+      z-index: 10;
+      box-shadow: 0 -8px 24px rgba(0, 0, 0, 0.05);
     }
     header {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
       margin-bottom: 3rem;
     }
     header h1 {
       font-size: 2.5rem;
+      margin: 0;
+    }
+    header p {
       margin: 0;
     }
     .post-list {
@@ -53,31 +76,22 @@
 </head>
 <body>
 
-  <header style="display: flex; align-items: center; gap: 1rem; margin-bottom: 3rem;">
-  <img src="IMG_0920 2.jpg" alt="Profile photo" style="width: 220px; height: 220px; border-radius: 200%;">
-  <div>
-    <h1 style="margin: 0;">João Gonçalves</h1>
-    <p style="margin: 0;">Sailing the seas of finance</p>
-  </div>
-</header>
+  <div class="banner"></div>
 
+  <div class="content">
+    <header>
+      <img src="IMG_0920 2.jpg" alt="Profile photo" style="width: 220px; height: 220px; border-radius: 200%;" />
+      <div>
+        <h1>João Gonçalves</h1>
+        <p>Sailing the seas of finance</p>
+      </div>
+    </header>
 
-  <ul class="post-list">
-    <li>
-      <h2 class="post-title"><a href="posts/volatility-arbitrage.html">What stochastic processes reasonably captures commodity price dynamics #1</a></h2>
-      <div class="post-meta">May 15, 2025</div>
-      <p class="excerpt">A look on stochastic models for commodity prices, emphasizing spot and forward dynamics under market realities like seasonality, storage costs, and supply shocks....</p>
-    </li>
-    <li>
-      <h2 class="post-title"><a href="posts/dividend-modeling.html">Dividend Modeling in Derivative Pricing</a></h2>
-      <div class="post-meta">August 12, 2024</div>
-      <p class="excerpt">Examining different approaches to modeling cash dividends in option pricing models: strengths, weaknesses, and implementation tips...</p>
-    </li>
-    <li>
-      <h2 class="post-title"><a href="posts/risk-neutral-measure.html">Understanding the Risk-Neutral Measure</a></h2>
-      <div class="post-meta">July 28, 2024</div>
-      <p class="excerpt">We explore the fundamental concept of the risk-neutral measure in financial mathematics and how it underpins pricing models...</p>
-    </li>
-  </ul>
-</body>
-</html>
+    <ul class="post-list">
+      <li>
+        <h2 class="post-title"><a href="posts/volatility-arbitrage.html">What stochastic processes reasonably captures commodity price dynamics #1</a></h2>
+        <div class="post-meta">May 15, 2025</div>
+        <p class="excerpt">A look on stochastic models for commodity prices, emphasizing spot and forward dynamics under market realities like seasonality, storage costs, and supply shocks....</p>
+      </li>
+      <li>
+        <h2 class="post-title"><a href="posts/dividend-modeling.html">Dividend Modeling in Der
