@@ -50,31 +50,52 @@
       margin-top: 0.5rem;
       color: #444;
     }
-  </style>
 
-<header style="
+    .hero-header {
   background: url('background-header.jpg') center/cover no-repeat;
-  height: 300px;
+  height: 400px;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-overlay {
+  background-color: rgba(0, 0, 0, 0.4); /* optional dark overlay for contrast */
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding-left: 2rem;
+  color: white;
+}
+
+.hero-content {
   display: flex;
   align-items: center;
   gap: 1rem;
-  margin-bottom: 3rem;
-  color: white;
-  padding-left: 2rem;
-  padding-top: 2rem;
-  padding-bottom: 2rem;
-">
-  <img src="A.jpg" alt="Profile photo" style="
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    border: 3px solid white;
-  ">
-  <div>
-    <h1 style="margin: 0;">João Gonçalves</h1>
-    <p style="margin: 0;">Sailing the seas of finance</p>
+}
+
+.profile-pic {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  border: 3px solid white;
+}
+
+  </style>
+
+<header class="hero-header">
+  <div class="hero-overlay">
+    <div class="hero-content">
+      <img src="B.jpg" alt="Profile photo" class="profile-pic">
+      <div>
+        <h1>João Gonçalves</h1>
+        <p>Sailing the seas of finance</p>
+      </div>
+    </div>
   </div>
 </header>
+
 
   
 </head>
