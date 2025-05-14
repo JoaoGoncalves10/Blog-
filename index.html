@@ -8,6 +8,7 @@
     * {
       box-sizing: border-box;
     }
+
     body {
       font-family: Georgia, serif;
       color: #222;
@@ -16,6 +17,7 @@
       padding: 0;
       background: #fff;
     }
+
     .banner {
       position: relative;
       height: 550px;
@@ -24,6 +26,7 @@
       -webkit-mask-image: linear-gradient(to bottom, black 70%, transparent 100%);
       mask-image: linear-gradient(to bottom, black 70%, transparent 100%);
     }
+
     .content {
       max-width: 750px;
       margin: -100px auto 0 auto;
@@ -33,45 +36,113 @@
       z-index: 10;
       box-shadow: 0 -8px 24px rgba(0, 0, 0, 0.05);
     }
+
     header {
       display: flex;
       align-items: center;
       gap: 1rem;
       margin-bottom: 3rem;
+      flex-wrap: wrap;
+      justify-content: center;
+      text-align: center;
     }
+
+    header img {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      object-fit: cover;
+    }
+
     header h1 {
-      font-size: 2.5rem;
+      font-size: 2rem;
       margin: 0;
     }
+
     header p {
-      font-size: 1.2rem;
+      font-size: 1.1rem;
       margin: 0;
     }
+
     .post-list {
       list-style: none;
       padding: 0;
     }
+
     .post-list li {
       margin-bottom: 2.5rem;
     }
+
     .post-title {
-      font-size: 1.4rem;
+      font-size: 1.3rem;
       margin: 0 0 0.25rem 0;
     }
+
     .post-title a {
       text-decoration: none;
       color: #007acc;
     }
+
     .post-title a:hover {
       text-decoration: underline;
     }
+
     .post-meta {
-      font-size: 1.5rem;
+      font-size: 1rem;
       color: #666;
     }
+
     .excerpt {
       margin-top: 0.5rem;
       color: #444;
+    }
+
+    footer {
+      margin-top: 4rem;
+      text-align: center;
+      font-size: 0.9rem;
+      color: #666;
+    }
+
+    footer a {
+      color: #007acc;
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+
+    @media (max-width: 600px) {
+      .content {
+        padding: 1.2rem;
+        margin-top: -50px;
+      }
+
+      header {
+        flex-direction: column;
+      }
+
+      header img {
+        width: 120px;
+        height: 120px;
+      }
+
+      header h1 {
+        font-size: 1.6rem;
+      }
+
+      .post-title {
+        font-size: 1.1rem;
+      }
+
+      .post-meta {
+        font-size: 0.85rem;
+      }
+
+      .excerpt {
+        font-size: 0.95rem;
+      }
     }
   </style>
 </head>
@@ -81,7 +152,7 @@
 
   <div class="content">
     <header>
-      <img src="IMG_0920 2.jpg" alt="Profile photo" style="width: 220px; height: 220px; border-radius: 200%;" />
+      <img src="profile.jpg" alt="Profile photo" />
       <div>
         <h1>João Gonçalves</h1>
         <p>Sailing the seas of finance</p>
@@ -91,22 +162,24 @@
     <ul class="post-list">
       <li>
         <h2 class="post-title">
-
-<a href="Commodities.pdf">
-  What stochastic processes reasonably captures commodity price dynamics
-</a>
-     
+          <a href="Commodities.pdf">
+            What stochastic processes reasonably captures commodity price dynamics
+          </a>
         </h2>
         <div class="post-meta">May 15, 2025</div>
-        <p class="excerpt">A look on stochastic models for commodity prices, emphasizing spot and forward dynamics under market realities like seasonality, storage costs, and supply shocks....</p>
+        <p class="excerpt">
+          A look on stochastic models for commodity prices, emphasizing spot and forward dynamics under market realities like seasonality, storage costs, and supply shocks...
+        </p>
       </li>
-
     </ul>
- <footer>
-      <p>Connect with me: <a href="https://www.linkedin.com/in/joão-gonçalves-7b6930182/" target="_blank">LinkedIn</a> | Email: <a href="mailto:joaoprgoncalves_@outlook.pt">joaoprgoncalves_@outlook.pt</a></p>
-    </footer>
 
-    
+    <footer>
+      <p>
+        Connect with me:
+        <a href="https://www.linkedin.com/in/joão-gonçalves-7b6930182/" target="_blank">LinkedIn</a> |
+        Email: <a href="mailto:joaoprgoncalves_@outlook.pt">joaoprgoncalves_@outlook.pt</a>
+      </p>
+    </footer>
   </div>
 </body>
 </html>
